@@ -1,0 +1,1 @@
+CREATE TABLE supes(	SupeID int	, Name varchar(26)	, Intelligence int	, Strength int	, Speed int	, Power int	, Combat int	, FullName varchar(44)	, Creator varchar(6)	, Alignment varchar(7)	, Gender varchar(1)	);
