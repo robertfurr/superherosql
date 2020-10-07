@@ -113,10 +113,11 @@ UPDATE supes SET speed = 0 WHERE speed IS NULL;
 
 SELECT 
     s.name
+    , s.power as power_orig
     , COALESCE(s.power, 50) as power
     , s.speed
     -- Oops - divide by zero error
-    , COALESCE(s.power, 50) / s.speed as power_speed_ratio
+    --, COALESCE(s.power, 50) / s.speed as power_speed_ratio
     -- Alternatives
     --, COALESCE(s.power, 50) / decode(s.speed,0,null) as power_speed_ratio_v1
     --, COALESCE(s.power, 50) / decode(s.speed,0,1) as power_speed_ratio_v2
